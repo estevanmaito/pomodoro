@@ -1,8 +1,8 @@
 {
-  "name": "react-pomodoro",
+  "name": "pomodoro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://estevanmaito.github.io/react-pomodoro",
+  "homepage": "https://estevanmaito.me/pomodoro",
   "dependencies": {
     "@types/jest": "26.0.9",
     "@types/node": "14.0.27",
@@ -21,10 +21,11 @@
     "typescript": "3.9.7"
   },
   "scripts": {
-    "prestart": "tailwindcss build -o src/tailwind.output.css",
+    "prestart": "tailwindcss build src/tailwind.css -o src/tailwind.output.css",
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "prebuild": "env NODE_ENV=production postcss src/tailwind.css -o src/tailwind.output.css",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
