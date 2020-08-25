@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import TimerTypeIcon from '../components/TimerTypeIcon/TimerTypeIcon'
-import Timer from '../components/Timer/Timer'
-import Controls from '../components/Controls/Controls'
+import Timer from '../components/Timer'
+import Controls from '../components/Controls'
 import History from '../components/History/History'
-import Footer from '../components/Footer/Footer'
+import Footer from '../components/Footer'
 
 import DB from '../helpers/localStorage'
 import formatDate from '../helpers/formatDate'
 
-// import './Pomodoro.css'
 import bell from '../assets/audio/bell.mp3'
 
 interface Props {}
@@ -28,7 +26,7 @@ class Pomodoro extends Component<Props, State> {
     super(props)
     this.state = {
       pomodoros: POMODOROS,
-      showHistory: true,
+      showHistory: false,
       hasStarted: false,
       currentPomodoro: 0,
       elapsedTime: 0,
@@ -174,9 +172,8 @@ class Pomodoro extends Component<Props, State> {
     const inactiveState = 'font-semibold text-gray-300 px-2 py-1'
 
     return (
-      <div className="flex flex-col items-center max-w-lg mx-auto my-8 text-gray-700">
-        {/* <TimerTypeIcon type={currentPomodoro.type} /> */}
-        <div className="space-x-4">
+      <div className="flex flex-col items-center justify-center h-screen max-w-lg py-8 mx-auto text-gray-700">
+        <div className="mt-8 space-x-4">
           <span className={currentPomodoro.type === 'pomodoro' ? activeState : inactiveState}>
             Pomodoro
           </span>

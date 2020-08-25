@@ -13,7 +13,7 @@ import {
 
 interface Props {
   allPomodorosMade: []
-  pomos: Array<{type: string, name: string, id: number, duration: number, started?: any}>
+  pomos: Array<{ type: string; name: string; id: number; duration: number; started?: any }>
 }
 
 function History(props: Props) {
@@ -31,12 +31,14 @@ function History(props: Props) {
   const pomosThisMonth = getThisMonthPomos(pomosPerMonth)
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="flex flex-col items-center mt-12 text-sm">
       <HistoryList pomos={props.pomos} />
-      <HistoryStats value={pomosToday} label="Today" avg={avgPomosPerDay} />
-      <HistoryStats value={pomosThisWeek} label="This Week" avg={avgPomosPerWeek} />
-      <HistoryStats value={pomosThisMonth} label=" This Month" avg={avgPomosPerMonth} />
-      <HistoryStats value={allTimePomos} label="All time" />
+      <div className="flex space-x-4 text-center">
+        <HistoryStats value={pomosToday} label="Today" avg={avgPomosPerDay} />
+        <HistoryStats value={pomosThisWeek} label="This Week" avg={avgPomosPerWeek} />
+        <HistoryStats value={pomosThisMonth} label=" This Month" avg={avgPomosPerMonth} />
+        <HistoryStats value={allTimePomos} label="All time" />
+      </div>
     </div>
   )
 }

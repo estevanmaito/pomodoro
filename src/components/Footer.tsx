@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react'
-import cls from './Footer.module.css'
-import { ReactComponent as GithubIcon } from '../../assets/img/github.svg'
+import { ReactComponent as GithubIcon } from 'src/assets/img/github.svg'
 
 class Footer extends PureComponent {
   render() {
     return (
-      <div className={cls.footer}>
+      <div className="flex items-center mt-12 mb-8 space-x-8 text-sm">
         <p>
           Made by{' '}
-          <a href="https://github.com/estevanmaito" target="_blank" rel="noopener noreferrer">
+          <a href="https://twitter.com/estevanmaito" target="_blank" rel="noopener noreferrer">
             @estevanmaito
           </a>
         </p>
@@ -16,6 +15,7 @@ class Footer extends PureComponent {
           href="https://github.com/estevanmaito/react-pomodoro"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-gray-400"
         >
           <GithubIcon />
         </a>

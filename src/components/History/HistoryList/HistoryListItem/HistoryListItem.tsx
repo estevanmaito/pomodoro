@@ -5,15 +5,15 @@ import date from '../../../../helpers/formatDate'
 interface Props {
   name: string
   duration: number
-  started: any
+  started: string
 }
 
-function HistoryListItem({name, duration, started}: Props) {
+function HistoryListItem({ name, duration, started }: Props) {
   return (
     <tr>
-      <td>{name}</td>
-      <td>{date.printFromSeconds(duration)}</td>
-      <td>{started}</td>
+      <td className="px-4 py-1">{name}</td>
+      <td className="px-4 py-1">{date.printFromSeconds(duration)}</td>
+      <td className="px-4 py-1">{started}</td>
     </tr>
   )
 }

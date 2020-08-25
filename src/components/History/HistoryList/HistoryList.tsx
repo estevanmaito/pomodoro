@@ -1,21 +1,19 @@
 import React from 'react'
 import HistoryListItem from './HistoryListItem/HistoryListItem'
 
-import cls from './HistoryList.module.css'
-
 interface Props {
-  pomos: Array<{id: number, name: string, duration: number, started?: any}>
+  pomos: Array<{ id: number; name: string; duration: number; started?: any }>
 }
 
-function HistoryList({pomos}: Props) {
+function HistoryList({ pomos }: Props) {
   return (
-    <div>
-      <table className={cls.table}>
-        <thead>
+    <div className="inline-block mb-4">
+      <table>
+        <thead className="text-left">
           <tr>
-            <th>Type</th>
-            <th>Length</th>
-            <th>Started</th>
+            <th className="px-4 py-1">Type</th>
+            <th className="px-4 py-1">Length</th>
+            <th className="px-4 py-1">Started</th>
           </tr>
         </thead>
         <tbody>
