@@ -13,7 +13,7 @@
     "date-fns": "^1.30.1",
     "gh-pages": "^2.0.1",
     "heroicons-react": "1.1.0",
-    "postcss": "7.0.32",
+    "postcss-cli": "7.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-scripts": "3.4.3",
