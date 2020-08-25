@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+.timer {
+  font-size: 10rem;
+  font-weight: 400;
+  font-family: 'Roboto Mono';
+}
+
+@media screen and (max-width: 510px) {
+  .timer {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .timer {
+    font-size: 5rem;
+  }
+}
