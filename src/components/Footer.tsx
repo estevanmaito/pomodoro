@@ -7,12 +7,12 @@ class Footer extends PureComponent {
       <div className="flex items-center mt-12 mb-8 space-x-8 text-sm">
         <p>
           Made by{' '}
-          <a href="https://twitter.com/estevanmaito" target="_blank" rel="noopener noreferrer">
-            @estevanmaito
+          <a href="https://estevanmaito.me" target="_blank" rel="noopener noreferrer">
+            Estevan Maito
           </a>
         </p>
         <a
-          href="https://github.com/estevanmaito/react-pomodoro"
+          href="https://github.com/estevanmaito/pomodoro"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400"
