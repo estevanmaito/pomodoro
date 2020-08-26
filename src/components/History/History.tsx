@@ -13,7 +13,7 @@ import {
 
 interface Props {
   allPomodorosMade: []
-  pomos: Array<{ type: string; name: string; id: number; duration: number; started?: any }>
+  pomos: Array<{ type: string; name: string; id: number; duration: number; started?: string }>
 }
 
 function History(props: Props) {

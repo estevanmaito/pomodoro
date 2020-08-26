@@ -5,7 +5,7 @@ import date from '../../../../helpers/formatDate'
 interface Props {
   name: string
   duration: number
-  started: string
+  started?: string
 }
 
 function HistoryListItem({ name, duration, started }: Props) {

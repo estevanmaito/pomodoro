@@ -2,7 +2,7 @@ import React from 'react'
 import HistoryListItem from './HistoryListItem/HistoryListItem'
 
 interface Props {
-  pomos: Array<{ id: number; name: string; duration: number; started?: any }>
+  pomos: Array<{ id: number; name: string; duration: number; started?: string }>
 }
 
 function HistoryList({ pomos }: Props) {

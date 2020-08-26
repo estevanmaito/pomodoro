@@ -9,7 +9,7 @@ export default {
     return JSON.parse(localStorage.getItem(field) || '[]')
   },
 
-  getTodaysPomodoros() {
+  getTodaysPomodoros(): number[] {
     const ALL_POMOS = this.read('pomodoro')
     return ALL_POMOS.filter((pomo) => {
       const POMO_DATE = new Date(pomo).getDate()
@@ -18,7 +18,7 @@ export default {
     })
   },
 
-  getAllTimePomodoros() {
+  getAllTimePomodoros(): [] {
     return this.read('pomodoro') || []
   },
 }

@@ -11,6 +11,7 @@ interface Props {
 class Controls extends PureComponent<Props> {
   audio = new Audio(click)
 
+  // click wrapper to play button sounds
   handleClick = (fn: () => void): void => {
     this.audio.play()
     fn()

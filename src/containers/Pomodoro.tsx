@@ -12,12 +12,12 @@ import bell from '../assets/audio/bell.mp3'
 interface Props {}
 
 interface State {
-  pomodoros: Array<{ type: string; name: string; id: number; duration: number; started?: any }>
+  pomodoros: Array<{ type: string; name: string; id: number; duration: number; started?: string }>
   showHistory: boolean
   hasStarted: boolean
   currentPomodoro: number
   elapsedTime: number
-  interval: any
+  interval: number | undefined
   allPomodorosMade: []
 }
 
@@ -46,7 +46,7 @@ class Pomodoro extends Component<Props, State> {
   }
 
   componentWillUnmount = () => {
-    clearInterval(this.state.interval)
+    window.clearInterval(this.state.interval)
   }
 
   handleHistoryVisibility = () => {
@@ -70,7 +70,7 @@ class Pomodoro extends Component<Props, State> {
   }
 
   startTimer = () => {
-    const interval = setInterval(() => {
+    const interval = window.setInterval(() => {
       // if timer reached 0, load next pomodoro
       if (this.state.elapsedTime === this.state.pomodoros[this.state.currentPomodoro].duration) {
         return this.nextPomo()
@@ -92,13 +92,13 @@ class Pomodoro extends Component<Props, State> {
           if (i === state.currentPomodoro) {
             return {
               ...pomo,
-              started: null,
+              started: undefined,
             }
           }
           return pomo
         }),
         elapsedTime: 0,
-        interval: null,
+        interval: undefined,
         hasStarted: false,
       }
     })
@@ -110,7 +110,7 @@ class Pomodoro extends Component<Props, State> {
       pomodoros: POMODOROS,
       hasStarted: false,
       elapsedTime: 0,
-      interval: null,
+      interval: undefined,
       currentPomodoro: 0,
     })
   }

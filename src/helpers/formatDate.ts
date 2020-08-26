@@ -1,13 +1,12 @@
 export default {
-  printFromDateObject(format: string, time: number): string | number {
+  printFromDateObject(format: string, time: number): string {
     const DATE = new Date(time)
     switch (format) {
       case 'hh:mm':
+      default:
         const HOUR = DATE.getHours()
         const MIN = DATE.getMinutes()
         return `${HOUR < 10 ? '0' : ''}${HOUR}:${MIN < 10 ? '0' : ''}${MIN}`
-      default:
-        return time
     }
   },
   printFromSeconds(seconds: number): string {
