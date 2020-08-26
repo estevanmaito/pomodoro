@@ -43,7 +43,6 @@ class Controls extends PureComponent<Props> {
         <div className="flex flex-col items-center">
           <button
             className="p-4 bg-gray-300 rounded-full focus:outline-none gray-button"
-            // style={{ boxShadow: '#d2d6dc 0px 0px 0px 2px inset, #ffffff 0px 2px 3px 1px inset' }}
             onClick={() => this.handleClick(handleResetTimer)}
             title="Reset timer"
           ></button>
@@ -52,7 +51,6 @@ class Controls extends PureComponent<Props> {
         <div className="flex flex-col items-center">
           <button
             className="p-4 bg-gray-300 rounded-full focus:outline-none gray-button"
-            // style={{ boxShadow: '#d2d6dc 0px 0px 0px 2px inset, #ffffff 0px 2px 3px 1px inset' }}
             onClick={() => this.handleClick(showHistory)}
             title="History"
           ></button>
