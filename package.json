@@ -2,6 +2,7 @@
   "name": "pomodoro",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://estevanmaito.me/pomodoro",
   "dependencies": {
     "@types/jest": "26.0.9",
     "@types/node": "14.0.27",
