@@ -172,7 +172,7 @@ class Pomodoro extends Component<Props, State> {
     const inactiveState = 'font-semibold text-gray-300 px-2 py-1'
 
     return (
-      <div className="flex flex-col items-center justify-center h-screen max-w-lg py-8 mx-auto text-gray-700">
+      <div className="flex flex-col items-center justify-center max-w-lg min-h-screen py-8 mx-auto text-gray-700">
         <div className="mt-8 space-x-4">
           <span className={currentPomodoro.type === 'pomodoro' ? activeState : inactiveState}>
             Pomodoro
