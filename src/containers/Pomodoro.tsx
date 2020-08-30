@@ -161,7 +161,7 @@ class Pomodoro extends Component<Props, State> {
           }
           return pomo
         }),
-        allPomodorosMade: allPomodorosMade || state.allPomodorosMade,
+        allPomodorosMade: allPomodorosMade.length > 0 ? allPomodorosMade : state.allPomodorosMade,
       }
     })
   }
